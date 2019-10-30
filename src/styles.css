@@ -5,3 +5,10 @@
 a,nav,body {
   font-family: 'Fira Code', monospace;
 }
+
+.green_color {
+  color:greenyellow;
+}
+.background_color {
+  background-color: black;
+}
