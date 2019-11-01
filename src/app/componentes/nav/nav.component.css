@@ -1,0 +1,14 @@
+.espacios {
+  padding-left:5em;
+  padding-right:5em;
+}
+
+.color_nav {
+  background-color: black !important;
+}
+
+.color_nav_menu {
+  color: greenyellow !important;
+  text-decoration: greenyellow !important;
+  text-decoration-line: underline !important;
+}
