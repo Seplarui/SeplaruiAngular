@@ -1,0 +1,44 @@
+.green_color {
+  color:greenyellow;
+}
+.background_color {
+  background-color: black;
+}
+
+.cursor {
+  font-size:28px;
+  font-family:helvetica;
+  font-weight:bold;
+  color:#71d90b;
+  text-transform:uppercase;
+}
+.blink {
+
+  animation-name: blinko;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:blinko;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinko{
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinko {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes blinko {
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
