@@ -1,11 +1,23 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p>
-        {{repos || json}}
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Número</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">URL</th>
+            <th scope="col">Fecha creación</th>
+          </tr>
 
-      </p>
-      <h1>hola -->  {{id}}</h1>
+          <tr *ngFor="let reposs of repos; let num=index;">
+            <th>{{num+1}}</th>
+            <th>{{reposs.name}}</th>
+            <th><a href="{{reposs.html_url}}">{{reposs.html_url}}</a></th>
+            <th>{{reposs.created_at}}</th>
+          </tr>
+        </thead>
+      </table>
     </div>
   </div>
 </div>

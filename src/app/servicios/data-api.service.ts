@@ -9,9 +9,12 @@ export class DataApiService {
 
   constructor(private http: HttpClient) { }
 
+  headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+
   getRepos() {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
-    const urlApi = 'https://api.github.com/users/seplarui/repos';
-    return this.http.get(urlApi, { headers, responseType: 'text' });
+
+    const urlApi = 'https://api.github.com/users/seplarui/repos?per_page=130';
+    return this.http.get(urlApi);
+
   }
 }

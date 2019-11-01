@@ -18,7 +18,9 @@ export class GithubComponent implements OnInit {
   }
   getReposUser() {
     // this.dataApi.getRepos().subscribe((repos) => console.log(repos));
-    this.dataApi.getRepos().subscribe((repos: any) => this.repos = repos);
+
+    this.dataApi.getRepos().subscribe((repos: any) => { this.repos = repos; });
+
 
   }
 
