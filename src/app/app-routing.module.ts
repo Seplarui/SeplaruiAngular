@@ -5,7 +5,8 @@ import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import { GithubComponent } from './componentes/github/github.component';
 
 const routes: Routes = [
-  { path: 'github', component: GithubComponent }
+  { path: 'github', component: GithubComponent },
+  // { path: '**', component: NotFoundComponent }
   // { path: '', component: HomeComponent },
   // { path: '**', component: NotFoundComponent }
 ];
