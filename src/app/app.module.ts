@@ -8,6 +8,7 @@ import { JumbotronComponent } from './componentes/jumbotron/jumbotron.component'
 import { HomeComponent } from './componentes/home/home.component';
 import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import { GithubComponent } from './componentes/github/github.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GithubComponent } from './componentes/github/github.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
