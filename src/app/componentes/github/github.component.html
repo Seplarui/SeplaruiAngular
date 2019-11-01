@@ -14,7 +14,7 @@
             <th>{{num+1}}</th>
             <th>{{reposs.name}}</th>
             <th><a href="{{reposs.html_url}}">{{reposs.html_url}}</a></th>
-            <th>{{reposs.created_at}}</th>
+            <th>{{reposs.created_at | date: 'dd/MM/yy'}}</th>
           </tr>
         </thead>
       </table>
