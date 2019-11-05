@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from 'src/app/servicios/data-api.service';
 
+declare var selectMenu: any;
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
@@ -15,8 +16,10 @@ export class GithubComponent implements OnInit {
 
   ngOnInit() {
     this.getReposUser();
+    selectMenu();
   }
   getReposUser() {
+
     // this.dataApi.getRepos().subscribe((repos) => console.log(repos));
 
     this.dataApi.getRepos().subscribe((repos: any) => { this.repos = repos; });
