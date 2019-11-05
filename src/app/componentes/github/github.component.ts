@@ -13,18 +13,18 @@ export class GithubComponent implements OnInit {
   constructor(private dataApi: DataApiService) { }
 
   private repos: any;
+  private commits: any;
 
   ngOnInit() {
     this.getReposUser();
     selectMenu();
   }
   getReposUser() {
-
     // this.dataApi.getRepos().subscribe((repos) => console.log(repos));
-
     this.dataApi.getRepos().subscribe((repos: any) => { this.repos = repos; });
-
-
+  }
+  getCommits() {
+    this.dataApi.getCommits().subscribe((commits: any) => this.commits = commits);
   }
 
 }

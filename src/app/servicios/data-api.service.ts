@@ -17,4 +17,8 @@ export class DataApiService {
     return this.http.get(urlApi);
 
   }
+  getCommits() {
+    const urlApi = 'https://api.github.com/repos/seplarui/SeplaruiAngular/commits';
+    return this.http.get(urlApi);
+  }
 }
