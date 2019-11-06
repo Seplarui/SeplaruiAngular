@@ -19,10 +19,18 @@
           </tr>
         </thead>
       </table> -->
-      <div class="form-group">
+      <!-- <div class="form-group">
         <select class="custom-select" id="repositorio" name="repositorio" onchange="selectMenu()">
           <option *ngFor="let reposs of repos">{{reposs.name}}</option>
         </select>
+      </div> -->
+      <select [ngModel]="selectedDevice" (ngModelChange)="onChange($event)" name="sel2">
+        <option [value]="repo.name" *ngFor="let repo of repos">{{repo.name}}</option>
+    </select>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p *ngFor="let commit of commits">{{commit.date}}</p>
       </div>
     </div>
   </div>
