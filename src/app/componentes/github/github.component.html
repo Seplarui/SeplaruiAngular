@@ -24,13 +24,22 @@
           <option *ngFor="let reposs of repos">{{reposs.name}}</option>
         </select>
       </div> -->
-      <select [ngModel]="selectedDevice" (ngModelChange)="onChange($event)" name="sel2">
+      <div class="form-group">
+      <select class="form-control" [ngModel]="selectedRepo" (ngModelChange)="onChange($event)" name="sel2">
         <option [value]="repo.name" *ngFor="let repo of repos">{{repo.name}}</option>
     </select>
     </div>
+    </div>
     <div class="row">
-      <div class="col-md-6">
-        <p *ngFor="let commit of commits">{{commit.date}}</p>
+      <div class="col-md-8">
+        <table class="table">
+          <thead>
+            <tr>
+
+            </tr>
+          </thead>
+        </table>
+        <p *ngFor="let commit of commits">{{commit}}</p>
       </div>
     </div>
   </div>
