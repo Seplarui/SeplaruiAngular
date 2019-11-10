@@ -1,48 +1,36 @@
-
+<div class="container">
+  <div class="row">
+    <h1>Github: Seplarui</h1>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <!-- <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Número</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">URL</th>
-            <th scope="col">Fecha creación</th>
-          </tr>
-
-          <tr *ngFor="let reposs of repos; let num=index;">
-            <th>{{num+1}}</th>
-            <th>{{reposs.name}}</th>
-            <th><a href="{{reposs.html_url}}" target="_blank">{{reposs.html_url}}</a></th>
-            <th>{{reposs.created_at | date: 'dd/MM/yy'}}</th>
-          </tr>
-        </thead>
-      </table> -->
-      <!-- <div class="form-group">
-        <select class="custom-select" id="repositorio" name="repositorio" onchange="selectMenu()">
-          <option *ngFor="let reposs of repos">{{reposs.name}}</option>
-        </select>
-      </div> -->
       <div class="form-group">
-      <select class="form-control" [ngModel]="selectedRepo" (ngModelChange)="onChange($event)" name="sel2">
-        <option [value]="repo.name" *ngFor="let repo of repos">{{repo.name}}</option>
-    </select>
-    </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <table class="table">
-          <thead>
-            <tr>
-
-            </tr>
-          </thead>
-        </table>
-        <p *ngFor="let commit of commits">{{commit}}</p>
+        <select class="form-control" [ngModel]="selectedRepo" (ngModelChange)="onChange($event)" name="sel2">
+          <option [value]="repo.name" *ngFor="let repo of repos">{{repo.name}}</option>
+        </select>
       </div>
     </div>
   </div>
 </div>
-
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-offset-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Autor</th>
+            <th>Fecha</th>
+            <th>Mensaje</th>
+          </tr>
+          <tr *ngFor="let commit of commits">
+            <td>{{commit.author.login}}</td>
+            <td>{{commit.commit.author.date | date: 'dd/MM/yy'}}</td>
+            <td>{{commit.commit.message}}</td>
+        </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
